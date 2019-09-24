@@ -13,9 +13,12 @@ la a1, V
 jal POLIGONO
 
 
+li a0, 510
+jal AREA
 
 li a7, 10
 ecall
 
 .include "poligono.asm"
+.include "area.asm"
 .include "include/SYSTEMv15.s"
