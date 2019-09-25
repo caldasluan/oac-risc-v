@@ -7,9 +7,12 @@ MAIN:
 la tp,exceptionHandling	# carrega em tp o endere�o base das rotinas do sistema ECALL
 csrrw zero,5,tp 	# seta utvec (reg 5) para o endere�o tp
 csrrsi zero,0,1 	# seta o bit de habilita��o de interrup��o em ustatus (reg 0)
- 	
+
+li a0, 4
+jal SORTEIA
+
+addi a1, a0, 0 	
 li a0, 0x00FF
-la a1, V
 jal POLIGONO
 
 
@@ -18,4 +21,5 @@ li a7, 10
 ecall
 
 .include "poligono.asm"
+.include "sorteia.asm"
 .include "include/SYSTEMv15.s"
