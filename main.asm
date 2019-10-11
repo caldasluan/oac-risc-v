@@ -12,10 +12,15 @@ li a0, 0x00FF
 la a1, V
 jal POLIGONO
 
-
+li a0, 0x00FF
+li a1,0x07070707
+li a2, 160	#x
+li a3, 120 	#y
+jal PREENCHE
 
 li a7, 10
 ecall
 
 .include "poligono.asm"
 .include "include/SYSTEMv15.s"
+.include "preenche.asm"
