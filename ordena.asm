@@ -43,7 +43,7 @@ jal sort
 add ra, s1, zero
 
 la t1, maxcoord
-lw t0, 0(a0)
+lw t0, 4(a0)		#primeiro ponto
 li t2, 0
 count:
 beq t0, t1, fim
@@ -55,7 +55,7 @@ j count
 fim:
 
 li t6, N
-addi t2, t2, 1
+#addi t2, t2, 1
 concat:
 beq s0, t6, endconcat
 addi s0, s0, 1
@@ -65,6 +65,8 @@ lw t1, 0(t0)
 slli t3, t2, 2
 add t3, t3, a0
 sw t1, 0(t3)
+addi t2, t2, 1
+j concat
 endconcat:
 lw ra, 16(sp)
 lw s11, 12(sp)
