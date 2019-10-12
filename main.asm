@@ -1,7 +1,7 @@
-.eqv N 4
+.eqv N 7
 
 .data
-Vazio: .word 0, 0, 0, 0, 0, 0 ,0 ,0 ,0, 0, 0, 0	#vetor de tamnanho 12 (maximo)
+Vazio: .word 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0	#vetor de tamnanho 12 (maximo)
 maxcoord: .word 0x013f00ef
 
 .text
@@ -14,9 +14,11 @@ csrrsi zero,0,1 	# seta o bit de habilita��o de interrup��o em ustatus (
 li a0, N
 jal SORTEIA
 
+#########################################################################Teste para ordenacao########################################################################
 li a0, 7
 addi a1, sp, 0
 jal POLIGONO		#imprime poligono nao ordenado
+#######################################################################Fim Teste para ordenacao#########################################################################
 
 li t0, N
 li t1, 3
