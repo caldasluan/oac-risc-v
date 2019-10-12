@@ -1,4 +1,4 @@
-.eqv N 10
+.eqv N 4
 
 .data
 Vazio: .word 0, 0, 0, 0, 0, 0 ,0 ,0 ,0, 0, 0, 0	#vetor de tamnanho 12 (maximo)
@@ -18,10 +18,14 @@ li a0, 7
 addi a1, sp, 0
 jal POLIGONO		#imprime poligono nao ordenado
 
+li t0, N
+li t1, 3
+beq t0, t1, naoordena	#se a quantidade de pontos for 3, nao precisa ordenar
 addi a0, sp, 4		#pega o elemento 1 do vetor para ordenar
 li a1, N		#numero de elementos
 la a2, Vazio		
 jal ORDENA
+naoordena:
 
 #########################################################################Teste para ordenacao########################################################################
 SLEEP:	li t0,1
