@@ -45,20 +45,20 @@ and a3, t0, t1		# Pega o valor de Y1
 srli a2, t0, 16
 and a2, a2, t1		# Pega o valor de X1
 ###################################################################################################################################
-addi sp, sp, -12
-sw t0, 0(sp)
-sw a0, 4(sp)
-sw a7, 8(sp)
-SLEEP1:	li t0,1
-LOOPHMS1:li a0,1000   # 1 segundo
-	li a7,132
-	ecall
-	addi t0,t0,-1
-	bne t0,zero,LOOPHMS
-lw a7, 8(sp)
-lw a0, 4(sp)
-lw t0, 0(sp)
-addi sp, sp, 12
+#addi sp, sp, -12
+#sw t0, 0(sp)
+#sw a0, 4(sp)
+#w a7, 8(sp)
+#SLEEP1:	li t0,1
+#LOOPHMS1:li a0,1000   # 1 segundo
+#	li a7,132
+#	ecall
+#	addi t0,t0,-1
+#	bne t0,zero,LOOPHMS
+#lw a7, 8(sp)
+#w a0, 4(sp)
+#lw t0, 0(sp)
+#addi sp, sp, 12
 ###################################################################################################################################
 addi a4, s2, 0			# Pega o valor da cor
 li a5, 0			# Escolhe frame
