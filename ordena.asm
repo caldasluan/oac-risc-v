@@ -4,6 +4,9 @@
 #e ordenara os de altura maior da esquerda para a direita e os de altura menor da direita para a esquerda. Porem, se todos os pontos
 #forem maiores, o algoritmo vai pegar o ponto mais baixo dentre eles e o fara o ultimo ponto.
 ####################################################################################################################################
+#bugs: 	ponto mais a esquerda mais alto:	infinito
+#	ponto mais a esquerda mais baixo:	tela azul
+#problemas:dependendo da organizacao dos pontos finais pode nao funcionar
 .text
 ORDENA:
 addi sp, sp, -20
