@@ -1,8 +1,7 @@
 ####################################################################################################################################
 #Algoritmo vai ordenar os pontos da esquerda para a direita por meio de um simples bubble sort primeiramente, em seguida, vai pegar
 #o primeiro ponto apos o ordenamento e pegara a altura dele, em seguida, separara os pontos com altura maior que a dele dos menores
-#e ordenara os de altura maior da esquerda para a direita e os de altura menor da direita para a esquerda. Porem, se todos os pontos
-#forem maiores, o algoritmo vai pegar o ponto mais baixo dentre eles e o fara o ultimo ponto.
+#e ordenara os de altura maior da esquerda para a direita e os de altura menor da direita para a esquerda.
 ####################################################################################################################################
 #bugs: 	ponto mais a esquerda mais alto:	infinito
 #	ponto mais a esquerda mais baixo:	tela azul
