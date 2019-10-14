@@ -1,7 +1,35 @@
 .data
-
-v: .word 9, 2, 5, 1, 8, 2, 4, 3, 6, 7, 10, 2, 32, 54, 2, 12, 6, 3, 1, 78,54, 23, 1, 54, 2, 65, 3, 6, 55, 31
-        
+v:
+        .word   9
+        .word   2
+        .word   5
+        .word   1
+        .word   8
+        .word   2
+        .word   4
+        .word   3
+        .word   6
+        .word   7
+        .word   10
+        .word   2
+        .word   32
+        .word   54
+        .word   2
+        .word   12
+        .word   6
+        .word   3
+        .word   1
+        .word   78
+        .word   54
+        .word   23
+        .word   1
+        .word   54
+        .word   2
+        .word   65
+        .word   3
+        .word   6
+        .word   55
+        .word   31
 .text
 
 main:
@@ -26,8 +54,9 @@ main:
         lw      ra,12(sp)
         lw      s0,8(sp)
         addi    sp,sp,16
-	li a7, 10
-	ecall
+        li a7, 10
+        ecall
+
 
 show:
         addi    sp,sp,-32
@@ -37,12 +66,12 @@ show:
         sw      a1,-24(s0)
         lw      a5,-20(s0)
         lw      a4,-24(s0)
-         mv     t0,a5
+         mv     t0,a5 
          mv     t1,a4 
          mv     t2,zero 
 loop1:  beq     t2,t1,fim1 
         li      a7,1 
-        lw      a0,0(t0)
+        lw      a0,0(t0) 
         ecall 
         li      a7,11 
         li      a0,9 
