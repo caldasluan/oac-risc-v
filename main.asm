@@ -21,14 +21,14 @@ jal POLIGONO
 li a0, 0xff009600	#endereco central em relacao a altura
 #li a0, 0xff002900
 addi a0, a0, 160	#endereco central
-li a1, 0xff012c00	#endereco final
+#li a1, 0xff012c00	#endereco final
 li a2, 0x07		#cor a pintar
 li a3, 0x0ff		#cor da linha
-jal TESTEPREENCHE
+jal PREENCHE
 
 li a7, 10
 ecall
 
 .include "poligono.asm"
 .include "include/SYSTEMv15.s"
-.include "preencheTest.asm"
+.include "preenche.asm"
